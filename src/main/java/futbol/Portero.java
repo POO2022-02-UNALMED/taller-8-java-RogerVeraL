@@ -50,6 +50,11 @@ public class Portero extends Futbolista{
     @Override
     public boolean jugarConLasManos() {return true;}
     
+    @Override
+    public int compareTo(Object player) {
+        Portero p = (Portero)player;
+        return  Math.abs(this.getGolesRecibidos() - p.getGolesRecibidos());
+    }
     
     
 }

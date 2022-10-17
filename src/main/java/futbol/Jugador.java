@@ -22,8 +22,8 @@ public class Jugador extends Futbolista {
         this.dorsal = dorsal;
     }
     //constructor por defecto
-    public Jugador(String nombre, int edad, String posicion) {
-        super(nombre, edad, posicion);
+    public Jugador() {
+        super();
         this.golesMarcados = 289;
         this.dorsal = 7;
     }
@@ -54,6 +54,11 @@ public class Jugador extends Futbolista {
     @Override
     public boolean jugarConLasManos() {return false;}
     
+    @Override
+    public int compareTo(Object player) {
+        Jugador j = (Jugador)player;
+        return  Math.abs(this.getEdad()- j.getEdad());
+    }
     
     
     
