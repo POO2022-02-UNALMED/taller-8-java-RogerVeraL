@@ -55,7 +55,7 @@ public abstract class Futbolista implements Comparable<Object>{
      public String toString() {
         String cad="El futbolista " + getNombre() + " tiene " + getEdad() + ", y juega de " + getPosicion();
 	return cad;
-	}
+    }
      
      public boolean equals(Futbolista f) {
         if(this != f) {return false;}
